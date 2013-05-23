@@ -1,0 +1,56 @@
+/* Inside Positions */
+
+.label[data-label]
+  &.inside
+    &.top
+      &:before
+        top: 0px
+      &:after,
+        display: none
+    &.middle
+      &:before
+        display: none
+      &:after
+        top: 45%
+    &.bottom
+      &:before
+        display: none
+      &:after
+        bottom: 1%
+    &.left
+      &:after, &:before
+        @include label-float(left)
+    &.right
+      &:after, &:before
+        @include label-float(right)
+
+
+/* Outside Positions */
+
+.label[data-label]
+  &.outside
+    overflow: initial
+    &:after, &:before
+      position: relative
+      background: none
+    &:after
+      margin-bottom: -5%
+    &:before
+      margin-top: -5%
+    &.top
+      &:after,
+        display: none
+    &.bottom
+      &:before
+        display: none
+      &:after
+        bottom: 1%
+
+
+/* RTL Support */
+
+.label[data-label]
+  &.rtl
+    &:after, &:before
+      text-align: right
+      direction: rtl

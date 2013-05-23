@@ -1,0 +1,49 @@
+/* fade effect */
+
+.label[data-label]
+  &.fade
+    &:after, &:before
+      @include label-transition
+      @include label-visibility(false)
+    &:hover
+      &:after, &:before
+        @include label-visibility(true)
+
+
+/* float effect */
+
+.label[data-label]
+  &.float
+    &:after, &:before
+      @include label-transition
+      @include label-visibility(false)
+    &:hover
+      &:after, &:before
+        @include label-visibility(true)
+  &.inside
+    &.top.float
+      &:before
+        top: -15px
+      &:hover:before
+        top: 0
+    &.bottom.float
+      &:after
+        bottom: -5px
+      &:hover:after
+        bottom: 1%
+    &.middle.float
+      &:after
+        margin-top: 20px
+      &:hover:after
+        margin-top: 0px
+  &.outside
+    &.top.float
+      &:before
+        top: 10px
+      &:hover:before
+        top: 0px
+    &.bottom.float
+      &:after
+        top: -10px
+      &:hover:after
+        top: 0px

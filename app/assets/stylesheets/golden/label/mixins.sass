@@ -1,0 +1,24 @@
+@mixin label-float($place)
+  @if $place == left
+    float: left
+    width: auto
+    left: 0px
+  @else
+    float: right
+    width: auto
+    right: 0px
+
+@mixin label-transition($delay: 0.25s)
+  transition: all $delay ease
+  -webkit-transition: all $delay ease
+  -moz-transition: all $delay ease
+  -ms-transition: all $delay ease
+  -o-transition: all $delay ease
+
+@mixin label-visibility($visible)
+  @if $visible == true
+    opacity: 1
+    visibility: visible
+  @else
+    opacity: 0
+    visibility: hidden

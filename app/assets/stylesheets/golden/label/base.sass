@@ -1,0 +1,22 @@
+/* Basic CSS for the label */
+
+.label[data-label]
+  position: relative
+  font-family: $label-font-family
+  margin: auto
+  display: inline-block
+  width: auto
+  overflow: hidden
+  &:after, &:before
+    position: absolute
+    height: auto
+    width: 98%
+    display: block
+    padding: 1%
+    background: $label-background-color
+    font-family: $label-font-family
+    font-size: $label-font-size
+    font-weight: $label-font-weight
+    content: attr(data-label)
+  span[data-label]
+    content: attr(data-label)
