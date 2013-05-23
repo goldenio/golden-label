@@ -1,4 +1,4 @@
-# Golden::Label
+# Golden Label
 
 [label.css](https://github.com/usablica/label.css) is a stylesheet providing an easy way to label html elements.
 
@@ -33,7 +33,7 @@ Add html element with `label` class and `data-label` attribute.
 Adjust positon of label by adding class combination.
 
 * `inside` can go with `top`, `middle`, `bottom`, `left` and `right`
-* `outside` can go with `top` and `middle`
+* `outside` can go with `top` and `bottom`
 
 Add hover effects by adding `fade` or `float` class.
 
